@@ -1,0 +1,97 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background: #c7d5df;
+}
+.container{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+.brand-icons{
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 7px;
+  border-radius: 5px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+  transition: all .5s cubic-bezier(0.7, -0.5, 0.3, 1.5);
+  transform: translateX(-100%);
+}
+.close-btn.active ~ .brand-icons{
+  transform: translateX(0);
+}
+.brand-icons a{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 8px;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s linear;
+}
+.brand-icons a:hover{
+  transform: scale(1.1);
+}
+.brand-icons a .tooltip{
+  position: absolute;
+  left: 65px;
+  font-size: 14px;
+  background-color: #fff;
+  padding: 4px 8px;
+  border-radius: 5px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+  transform: translateX(-25px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all .2s linear;
+}
+.brand-icons a:hover .tooltip{
+  opacity: 1;
+  transform: translateX(0);
+}
+.brand-icons a .tooltip::before{
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  transform: translateY(-50%) rotate(45deg);
+  background-color: #fff;
+}
+.close-btn{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 20px;
+  background-color: #8336ff;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all .5s cubic-bezier(.7, -.5, .3, 1.5);
+}
+.close-btn.active{
+  transform: rotate(225deg);
+  border-radius: 50%;
+  background-color: #de0612;
+}

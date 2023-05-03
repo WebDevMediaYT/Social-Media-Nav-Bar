@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Navigation | WebDevMediaYT</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+<body>
+
+  <div class="container">
+    <span class="close-btn">
+      <i class="fa-solid fa-plus"></i>
+    </span>
+
+    <div class="brand-icons">
+      <a href="#" style="background: #c13584;">
+        <i class="fa-brands fa-instagram"></i>
+        <span class="tooltip" style="color: #c13584;">Instagram</span>
+      </a>
+      <a href="#" style="background: #ff0000;">
+        <i class="fa-brands fa-youtube"></i>
+        <span class="tooltip" style="color: #ff0000;">YouTube</span>
+      </a>
+      <a href="#" style="background: #229ed9;">
+        <i class="fa-brands fa-telegram"></i>
+        <span class="tooltip" style="color: #229ed9;">Telegram</span>
+      </a>
+      <a href="#" style="background: #000;">
+        <i class="fa-brands fa-github"></i>
+        <span class="tooltip" style="color: #000;">Github</span>
+      </a>
+      <a href="#" style="background: #4267b2;">
+        <i class="fa-brands fa-facebook"></i>
+        <span class="tooltip" style="color: #4267b2;">Facebook</span>
+      </a>
+      <a href="#" style="background: #1da1f2;">
+        <i class="fa-brands fa-twitter"></i>
+        <span class="tooltip" style="color: #1da1f2;">Twitter</span>
+      </a>
+    </div>
+  </div>
+  <script>
+    const closeBtn = document.querySelector(".close-btn");
+
+    closeBtn.addEventListener("click", () => {
+      closeBtn.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
